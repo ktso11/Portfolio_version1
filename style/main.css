@@ -1,0 +1,31 @@
+body {
+  /* Background image and gradient */
+   /*background: fixed,*/
+    /*linear-gradient(to bottom, #29BAAF 10%,#2C085E 100%);*/
+    background-color: #0DE6D7;
+    font-family: 'Hind', sans-serif;
+    color: #505050;
+  }
+
+.navigation {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  flex-direction: column;
+  background-color: #FFF5C3;
+  border-radius: 2em;
+  padding: 1em 1em;
+  height: 20em;
+}
+
+
+#aboutMe, #contactMe , #portfolio, #socialMedia, #recommendations{
+/*  width: 10em;
+  height: 5em;*/
+  background-color: orange;
+  margin:.5em .5em;
+  border-radius: 1em;
+}
+/* .navigation>* {
+        flex: 1 6 10px;
+    }*/
