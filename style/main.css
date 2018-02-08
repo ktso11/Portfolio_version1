@@ -8,6 +8,8 @@ body {
     linear-gradient(to bottom, #29BAAF 10%,#2C085E 100%);
     background-color: #0DE6D7;
     font-family: 'Hind', sans-serif;
+    /*font-family: 'Shrikhand', cursive;*/
+/*    font-family: 'Open Sans', sans-serif;*/
     color: #505050;
     text-transform: uppercase;
   }
@@ -16,7 +18,8 @@ body {
   background-color: #FFF5C3;
   border-radius: 2em;
   padding: 1em 1em;
-  margin-top: 20em;
+  margin-top: 0em;
+  /*margin-top: 20em;*/
   margin-bottom: 20em;
 }
 
@@ -33,15 +36,24 @@ body {
   display: flex;
   justify-content: space-between;
   flex-direction: row;
+  height: 27em;
 }
 
 .picStat div{
   width: 0;
   height: 2em;
+  margin-bottom: 1.5em;
   background-color: green;
+  /*transition: width 2s;*/
 }
-.statsWrapper div{
-  margin: .5em;
+.stats p{
+  font-size: .9em;
+  color: white;
+  padding-left: 1em;
+  margin-top: .3em;
+  letter-spacing: .75em;
+  font-weight: 800;
+  font-family: 'Open Sans', sans-serif;*/
 }
 
 .statsWrapper {
@@ -49,11 +61,26 @@ body {
   display: flex;
   justify-content: space-between;
   flex-direction: column;
-  padding: 1em 2em;
+  padding: 1em 1em;
+}
+
+.picStat {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
 }
 
 
 /*TOP NAV*/
+ h1 {
+  font-weight: 800px;
+  font-family: 'Open Sans', sans-serif;
+  margin-bottom: -.3em;
+  margin-left: 1em;
+  font-size: 4em;
+  color:  #FFF5C3;
+  /*height: auto;*/
+}
 
 .navWrapper {
   display: flex;
