@@ -5,7 +5,7 @@
 body {
   /* Background image and gradient */
    background: fixed,
-    linear-gradient(to bottom, #29BAAF 10%,#2C085E 100%);
+    linear-gradient(to bottom, #29BAAF 20%,#2C085E 80%);
     background-color: #0DE6D7;
     font-family: 'Hind', sans-serif;
     /*font-family: 'Shrikhand', cursive;*/
@@ -19,7 +19,6 @@ body {
   border-radius: 2em;
   padding: 1em 1em;
   margin-top: 0em;
-  /*margin-top: 20em;*/
   margin-bottom: 20em;
 }
 
@@ -44,7 +43,6 @@ body {
   height: 2em;
   margin-bottom: 1.5em;
   background-color: green;
-  /*transition: width 2s;*/
 }
 .stats p{
   font-size: .9em;
@@ -53,7 +51,7 @@ body {
   margin-top: .3em;
   letter-spacing: .75em;
   font-weight: 800;
-  font-family: 'Open Sans', sans-serif;*/
+  font-family: 'Open Sans', sans-serif;
 }
 
 .statsWrapper {
