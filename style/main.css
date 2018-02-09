@@ -1,30 +1,106 @@
 *{
   box-sizing: border-box;
 }
+header {
+  background-color: #FFF5C3;
+  width: 100%;
+  margin-bottom: 5em;
+  display: flex;
+  height: 12em;
+  justify-content: flex-end;
+  align-items: flex-end;
+}
+header h1 {
+  font-size: 6em;
+  color: #29BAAF;
+}
 
+header p {
+  display: none;
+  color: #2C085E;
+  /*float: left;*/
+  font-size: 2em;
+  font-weight: 800;
+
+}
+footer {
+  background-color: #FFF5C3;
+  width: 100%;
+  margin-bottom: 0em;
+  height:4em;
+}
+
+main {
+  width: 80%;
+  margin: 0 auto;
+}
 body {
+/*    background-image: url('../img/background.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;*/
+    font-family: 'Hind', sans-serif;
   /* Background image and gradient */
    background: fixed,
     linear-gradient(to bottom, #29BAAF 20%,#2C085E 80%);
-    background-color: #0DE6D7;
-    font-family: 'Hind', sans-serif;
+
     /*font-family: 'Shrikhand', cursive;*/
 /*    font-family: 'Open Sans', sans-serif;*/
     color: #505050;
     text-transform: uppercase;
+    margin: 0em 0em;
   }
 
-.stats, .navwrapper ,.portfolioWrapper, .formWrapper{
+/*#inBetween {
+  width: 12em;
+  height: 3em;
+
+}
+.inBetween {
+  text-align: center;
+  margin-bottom: 3.5em;
+  margin-top: 3em;
+}*/
+
+/*FONT AWESOME*/
+/*fa-address-card {
+  font-size: 4em;
+  color: #FFF5C3;
+  margin-bottom: 0em;
+  align-items: flex-end;
+  padding-bottom: 0em;
+  float:left;
+  position: absolute;
+
+}*/
+/*FONT AWESOME*/
+
+/*
+.flyingObjects {
+
+margin-bottom: 0em;
+display: inline;
+  padding-bottom: 0em;
+
+z-index: -10
+
+
+}*/
+
+
+.stats, .navwrapper ,.portfolioWrapper, .formContainer, .reWrapper{
   background-color: #FFF5C3;
-  border-radius: 2em;
+  border-radius: 1em;
   padding: 1em 1em;
   margin-top: 0em;
-  margin-bottom: 20em;
+  margin-bottom: 2em;
+  position: relative;
+  height: 20em;
 }
 
-
-
 /*TOP NAV*/
+
+
  h1 {
   font-weight: 800px;
   font-family: 'Open Sans', sans-serif;
@@ -32,6 +108,9 @@ body {
   margin-left: 1em;
   font-size: 4em;
   color:  #FFF5C3;
+  margin-top: 0em;
+  width:50%;
+
 }
 
 .navWrapper {
@@ -56,6 +135,7 @@ body {
   border-radius: .5em;
   padding: .5em .5em;
   text-align: center;
+  font-weight: 800;
 }
 
 #summary {
@@ -69,16 +149,18 @@ body {
   flex: auto;
     }
 
-/*END OF TOP NAV*/
+/*TOP NAV*/
 
 /*STATS SECTION*/
 
 .stats img {
-  height: 23em;
+  height: 22em;
   width: 18%;
   margin-right: 1em;
+  margin-bottom: 3em;
   margin-left: 2.5em;
-  margin-top: 2.5em;
+  margin-top: 2em;
+  opacity: .5;
 }
 
 .stats {
@@ -121,15 +203,108 @@ body {
 
 /*START OF PORTFOLIO*/
 .portfolioWrapper img{
-  width:25%;
+  width:50px;
   height: auto
+}
+.portfolioWrapper {
+  width: 100%;
+}
+.projectPanel {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  margin: 1em 1.61em;
+  position: relative;
+  /*background-color: black;*/
+}
+.projectDescription {
+width: 70%;
+}
+
+.projectDescription section{
+  display: none;
+  height: 40%;
+  transition: all 2s linear;
+  background-color: orange;
+  align-items: stretch;
+  margin: 1em 1em;
+  border-radius: .5em;
+  padding: 1em 1em;
+}
+
+.projectSelector {
+  width: 30%;
+}
+.projectSelector div p{
+  text-align: center;
+  color: white;
+  font-weight: 800px;
+  font-family: 'Open Sans', sans-serif;
+  color: #FFF5C3;
+  background-color: #29BAAF;
+  border-radius: .5em;
+  cursor: pointer;
+  height: 8%;
+
+}
+.projectSelector div p:active {
+  background-color: orange;
+    border-radius: .5em;
+  text-shadow:.1em .1em .1em grey;
+  border: .2em dashed #29BAAF;
+}
+
+.projectSelector div p:hover {
+  background-color: orange;
+    border-radius: .5em;
+  text-shadow:.1em .1em .1em grey;
 }
 /*END OF PORTFOLIO*/
 
 
 /*START OF CONTACTFORM*/
+.formContainer {
+ display: flex;
+ align-items: center;
+justify-content: center;
 
+}
+.formWrapper {
+ display: flex;
+ flex-direction: column;
+ align-items: center;
+ width: 70%;
+}
 
+.formWrapper input, .formWrapper textarea{
+margin-top: 0em;
+width: 100%;
+}
 
+.formWrapper p {
+  margin-bottom: -.6em;
+  width:100%;
+  text-align: left;
+}
+
+.error{
+  /*color: red;*/
+  border: .2em solid pink;
+}
+
+#insertSomething {
+  display: none;
+   text-align: right;
+   width:100%;
+   /*float:right;*/
+  font-size: .5em;
+}
+
+.buttons {
+  display: flex;
+  justify-content: space-around;
+  flex-direction: row;
+
+}
 /*END OF CONTACTFORM*/
 
