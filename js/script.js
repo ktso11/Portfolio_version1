@@ -32,12 +32,6 @@ $('.projectSelector div p').each(function(){
 })
 
 
-// $(window).on('scroll', function(){
-//   if($(window).scrollTop()> 0){
-//       $('.fa-address-card').animate({'margin-right': '-5em'}, {duration: 400});
-//   }
-// })
-
 
 $('form').on('submit', function(event){
   event.preventDefault();
@@ -53,6 +47,34 @@ $('form').on('submit', function(event){
 })
 
 
+//slider https://snook.ca/archives/javascript/simplest-jquery-slideshow
+$('.slider img:gt(0)').hide(); //gt(0) means hide every img after img[index 0]
+  setInterval(function(){
+  $('.slider :first-child').fadeOut(0)
+  .next('img').toggleClass('reveal').fadeIn(800)
+  .end('').appendTo('.slider')} //orignal element returns to slider (first-child is going back to the back of slider)
+  ,4000); //execute function every 3000 milliseconds
+
+
+
+
+  var slide = $('.slider img');
+  var n = slide.length;
+  // var grabId = slide.attr("id")
+  for (var i =0; i < n; i++){
+     $('#id').on('click', function(){
+
+      slide[i].hide();
+     slide[i+1].show();
+     console.log("hello")
+  })}
+
+$('rightArrow').on('click', function() {
+  // Get currently displayed image id
+  // Take that id and find it in the slide object
+  // Change to that image
+  // Update the classes (hidden and reveal) accordingly
+})
 
 
 

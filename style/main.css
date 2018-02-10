@@ -308,3 +308,22 @@ width: 100%;
 }
 /*END OF CONTACTFORM*/
 
+/*RECOMMENDATIONS*/
+.slider { position:relative; width:auto; height:auto;
+}
+
+.slider img {
+  width: 10em;
+  height: 10em;
+  /*position:absolute; left:0; top:0;*/
+}
+
+.reWrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+.fa-angle-right {
+
+}
+/*END OF RECOMMENDATIONS*/
