@@ -1,6 +1,7 @@
 *{
   box-sizing: border-box;
 }
+
 header {
   background-color: #FFF5C3;
   width: 100%;
@@ -13,6 +14,7 @@ header {
 header h1 {
   font-size: 6em;
   color: #29BAAF;
+  text-align: right;
 }
 
 header p {
@@ -23,12 +25,7 @@ header p {
   font-weight: 800;
 
 }
-footer {
-  background-color: #FFF5C3;
-  width: 100%;
-  margin-bottom: 0em;
-  height:4em;
-}
+
 
 main {
   width: 80%;
@@ -39,56 +36,20 @@ body {
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;*/
-    font-family: 'Hind', sans-serif;
-  /* Background image and gradient */
+    /*font-family: 'Hind', sans-serif;*/
+   font-family: 'Open Sans', sans-serif;
    background: fixed,
     linear-gradient(to bottom, #29BAAF 20%,#2C085E 80%);
-
+  /*background-color:  #29BAAF;*/
     /*font-family: 'Shrikhand', cursive;*/
 /*    font-family: 'Open Sans', sans-serif;*/
-    color: #505050;
+    /*color: #505050;*/
+    color: #FFF5C3;
     text-transform: uppercase;
     margin: 0em 0em;
   }
 
-/*#inBetween {
-  width: 12em;
-  height: 3em;
-
-}
-.inBetween {
-  text-align: center;
-  margin-bottom: 3.5em;
-  margin-top: 3em;
-}*/
-
-/*FONT AWESOME*/
-/*fa-address-card {
-  font-size: 4em;
-  color: #FFF5C3;
-  margin-bottom: 0em;
-  align-items: flex-end;
-  padding-bottom: 0em;
-  float:left;
-  position: absolute;
-
-}*/
-/*FONT AWESOME*/
-
-/*
-.flyingObjects {
-
-margin-bottom: 0em;
-display: inline;
-  padding-bottom: 0em;
-
-z-index: -10
-
-
-}*/
-
-
-.stats, .navwrapper ,.portfolioWrapper, .formContainer, .reWrapper{
+.stats, .navwrapper ,.portfolioWrapper, .formContainer, .reWrapper, .acWrapper{
   background-color: #FFF5C3;
   border-radius: 1em;
   padding: 1em 1em;
@@ -99,7 +60,25 @@ z-index: -10
 }
 
 /*TOP NAV*/
+.navigation a, .navigation a:visited {
+  text-decoration: none;
+  color: #FFF5C3;
+}
+.navigation a:hover, .navigation a:active {
+  /*text-decoration: none;*/
+  color: #FFF5C3;
+   text-shadow:.1em .1em .1em black;
 
+}
+
+
+.navigation p{
+    color: #FFF5C3;
+}
+
+#aboutMe:hover, #contactMe:hover , #portfolio:hover, #socialMedia:hover, #recommendations:hover {
+  background-color: #505050;
+}
 
  h1 {
   font-weight: 800px;
@@ -109,7 +88,7 @@ z-index: -10
   font-size: 4em;
   color:  #FFF5C3;
   margin-top: 0em;
-  width:50%;
+  width:100%;
 
 }
 
@@ -135,14 +114,17 @@ z-index: -10
   border-radius: .5em;
   padding: .5em .5em;
   text-align: center;
-  font-weight: 800;
+
 }
 
 #summary {
-  text-align: center;
-  justify-content: center;
+/*  text-align: justify-all;
+  justify-content: center;*/
   padding: 1.61em 1.61em;
+  font-weight: 0em;
   width: 35%;
+      text-align: left;
+    /*text-justify: inter-word;*/
 }
 
 .navWrapper>* {
@@ -175,6 +157,7 @@ z-index: -10
   height: 2em;
   margin-bottom: 1.5em;
   background-color: green;
+   border-radius: .5em;
 }
 .stats p{
   font-size: .9em;
@@ -203,35 +186,88 @@ z-index: -10
 
 /*START OF PORTFOLIO*/
 .portfolioWrapper img{
-  width:50px;
-  height: auto
+  width: 9em;
+  height: 14em;
+  border-radius: .5em;
 }
+
 .portfolioWrapper {
   width: 100%;
+  height: auto;
 }
+
 .projectPanel {
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
   margin: 1em 1.61em;
   position: relative;
-  /*background-color: black;*/
 }
+
 .projectDescription {
 width: 70%;
 }
 
 .projectDescription section{
   display: none;
-  height: 40%;
-  transition: all 2s linear;
-  background-color: orange;
+  /*height: 40%;*/
+  /*transition: all 2s linear;*/
+  background-color: purple;
   align-items: stretch;
   margin: 1em 1em;
   border-radius: .5em;
   padding: 1em 1em;
+  /*height: 100%;*/
 }
 
+.projectDescription p{
+color: #FFF5C3;
+margin: 0em 1em;
+
+}
+.description {
+  width:100%;
+  padding-top: 0em;
+  margin-left: 1em;
+}
+
+.description p {
+    font-size: 1em;
+    /*font-weight:0px;*/
+        font-family: 'Hind', sans-serif;
+    margin-top: 0em;
+    margin-left: .5em;
+}
+
+.gitContainer{
+  /*text-align: right;*/
+  margin-top: 0em;
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  /*cursor: pointer;*/
+}
+
+.gitContainer a{
+  color: orange;
+  cursor: pointer;
+}
+.gitContainer a:hover{
+  color: #FFF5C3;
+  cursor: pointer;
+}
+
+.description h3 {
+  width:100%;
+  margin-bottom: .5em;
+  margin-top: 0em;
+  font-size: 1.5em;
+  /*font-weight: 800px;*/
+  color: #FFF5C3;
+  text-align: center;
+  background-color: orange;
+  border-radius: .5em;
+}
 .projectSelector {
   width: 30%;
 }
@@ -259,6 +295,14 @@ width: 70%;
     border-radius: .5em;
   text-shadow:.1em .1em .1em grey;
 }
+.project {
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: row;
+  align-items: flex-start;
+}
+
+
 /*END OF PORTFOLIO*/
 
 
@@ -267,7 +311,7 @@ width: 70%;
  display: flex;
  align-items: center;
 justify-content: center;
-
+height: auto;
 }
 .formWrapper {
  display: flex;
@@ -275,17 +319,33 @@ justify-content: center;
  align-items: center;
  width: 70%;
 }
+.buttons{
+  margin-top: .5em;
+}
 
 .formWrapper input, .formWrapper textarea{
-margin-top: 0em;
-width: 100%;
+  margin-top: 0em;
+  width: 100%;
+  font-size: 1em;
+  padding:.5em .5em;
+  border: 0em;
+  border-radius: 1em;
+  background-color: orange;
+  color: #FFF5C3;
 }
 
+
 .formWrapper p {
-  margin-bottom: -.6em;
+  margin-bottom: -.3em;
+  padding-left: 1em;
+  font-size: 1.2em;
+  margin-top: .2em;
   width:100%;
   text-align: left;
+  font-weight: 800;
+  color: orange;
 }
+
 
 .error{
   /*color: red;*/
@@ -298,6 +358,7 @@ width: 100%;
    width:100%;
    /*float:right;*/
   font-size: .5em;
+  color: #29BAAF;
 }
 
 .buttons {
@@ -309,21 +370,171 @@ width: 100%;
 /*END OF CONTACTFORM*/
 
 /*RECOMMENDATIONS*/
-.slider { position:relative; width:auto; height:auto;
-}
-
-.slider img {
-  width: 10em;
-  height: 10em;
-  /*position:absolute; left:0; top:0;*/
-}
+/*.slider { position:relative; width:auto; height:auto;
+}*/
 
 .reWrapper {
   display: flex;
   flex-direction: row;
   justify-content: center;
+  height: 26em;
 }
-.fa-angle-right {
+.hidden{
+  display: none;
+}
+.reveal {
+  display: block;
+}
 
+.slider {
+  width:80%;
+  display: flex;
+  justify-content: center;
+  /*text-align: center;*/
+  align-items: center;
+  background-color: orange;
+  border-radius: 1em;
+  margin: 1em 1.61em;
+  padding: 1em 2em;
+  height: 22em;
+}
+.slider p {
+  text-align: center;
+}
+#recFrom {
+  text-align: right;
+}
+.rightButton, .leftButton {
+  display: flex;
+  align-items: center;
 }
 /*END OF RECOMMENDATIONS*/
+
+/*ACHIEVEMENTS*/
+.show {
+  display: block;
+}
+.hide {
+  display: none;
+}
+
+ img#loo{
+  height: 12em;
+  width: 16em;
+}
+ img#ga{
+  height: 12em;
+  width: 20em;
+}
+
+.acWrapper{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  height: auto;
+  padding: 1.61em 1em;
+}
+
+.aslider {
+  width:80%;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  background-color: orange;
+  border-radius: 1em;
+  margin:auto 1em;
+  padding: 1em 1em;
+}
+
+.fa-angle-left, .fa-angle-right{
+  color: #29BAAF;
+}
+
+.fa-briefcase{
+  font-size: 8em;
+  color:purple;
+}
+
+.aslider p{
+  background-color: purple;
+  border-radius: 1em;
+  padding:.2em .5em;
+}
+.companylogo img{
+  margin: 1em 1em;
+}
+
+#conti {
+  height: 6em;
+  width:6em;
+  margin: .5em;
+}
+#mobis {
+  height: 6em;
+  width: 12em;
+  margin: .5em;
+}
+#scotia {
+  height: 6em;
+  width: 6em;
+  margin: .5em;
+}
+#randstad {
+  height: 6em;
+  width: 6em;
+    margin: .5em;
+}
+/*END OF ACHIEVEMENTS*/
+
+/*FOOTER*/
+footer {
+  background-color: #29BAAF;
+  width: 100%;
+  padding: 1em 1.6em;
+  margin-bottom: 0em;
+  margin-top: 5em;
+  height:4em;
+}
+footer p{
+  text-align: right;
+  font-family: 'Hind', sans-serif;
+  margin-bottom: 0em;
+}
+footer nav {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  align-items: center;
+  /*background-color: red;*/
+}
+
+footer nav a{
+  margin-right: 2em;
+  text-decoration: none;
+  color: #FFF5C3;
+
+}
+footer nav a:hover{
+  text-shadow:.1em .1em .1em black;
+  font-size: 1.1em;
+}
+
+/*END OF FOOTER*/
+
+
+/*media query*/
+@media screen and (max-width: 1000px) {
+
+#summary p{
+  font-size: .7em;
+
+}
+
+}
+
+
+
+
+
+
