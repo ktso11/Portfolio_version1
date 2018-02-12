@@ -2,16 +2,28 @@
 <head>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <script defer src="https://use.fontawesome.com/releases/v5.0.4/js/all.js"></script>
-  <title>Put title here</title>
+  <title>About Katie</title>
   <link href="https://fonts.googleapis.com/css?family=Hind" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:700|Shrikhand" rel="stylesheet">
   <script type="text/javascript" src="js/jquery-3.3.1.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
   <script type="text/javascript" src="js/script.js"></script>
   <link rel="stylesheet" href="style/main.css">
 </head>
 
 <body>
-<header> <h1>#katieSo</h1>
+  <div><a href="#" class="hamburger"><i class="fas fa-bars fa-3x"></i></a></div>
+  <header id="top">
+    <nav class="menu">
+    <a href="#top"> back to top</a>
+    <a href="#stats"> about me</a>
+    <a href="#portF"> portfolio </a>
+    <a href="#reC">testimonials</a>
+    <!-- <a href="#" class="hamburger">X</a> -->
+  </nav>
+<h1>#katieSo</h1>
  <p>{class: webdeveloper};</p>
  </header>
  <main>
@@ -20,18 +32,22 @@
 <div class="navigation">
   <h1>.navigate</h1>
   <div class="navWrapper">
-    <div id="aboutMe"> <p><a href="#stats"> about me</a></p><i class="far fa-address-book fa-2x"></i></div>
-    <div class="emptyDiv"><p>empty</p></div>
-    <div id="portfolio"><p>portfolio</p> <i class="fas fa-trophy fa-2x"></i></div>
-    <div id="contactMe"> <p>contact me</p> <i class="fas fa-envelope fa-2x"></i></div>
-    <div class="emptyDiv"><p>empty</p></div>
+    <div id="aboutMe"> <p><a href="#stats"> about me</p><i class="far fa-address-book fa-2x"></i></a></div>
+    <div class="emptyDiv"><p></p></div>
+    <div id="portfolio"><p><a href="#" onclick="portfolio()">portfolio</p> <i class="fas fa-trophy fa-2x"></i></a></div>
+    <div id="contactMe"> <p><br><a href="#contactForm">contact me</p> <i class="fas fa-envelope fa-2x"></i></a></div>
+    <div class="emptyDiv"><p></p></div>
     <div id="summary">
-     <!-- <img src="img/mynameis.png"> --><p>Some text here!!Some text here!!Some text here!!Some text here!!Some text here!!Some text here!! hello hello hello hello hello hello hello hello hello hello hello hellohello hello hello  hello hello hello hello hello hello hello hello
+      <p>hello! </p>
+      <p>I am Katie, a jr developer!</p>
+      <p> thank you for visiting my website, Continue scrolling down to see what I am capable of. if you have any questions, do <a href="#contactForm">contact me :)</a>, I would love to chat further!</p>
+      <p> love, katie</p>
       </p>
     </div>
-    <div id="socialMedia"> <p>social media</p> <i class="fab fa-linkedin fa-2x"></i> <i class="fab fa-facebook-square fa-2x"></i></div>
-    <div id="recommendations"><p>"insert quotes here"</p> <i class="fas fa-quote-left fa-2x"></i> <i class="fas fa-quote-right fa-2x"></i></div>
-    <div class="emptyDiv"><p>empty</p></div>
+    <div id="socialMedia"> <p></p><a href="https://www.linkedin.com/in/katie-so"><i class="fab fa-linkedin fa-2x"></i></a>&nbsp;&nbsp;<a href="https://www.instagram.com/ktso11"><i class="fab fa-instagram fa-2x"></i></a></div>
+    <div class="emptyDiv"><p><br></p></div>
+    <div id="recommendations"><a href="#reC"> <br><i class="fas fa-quote-left fa-2x"></i> <i class="fas fa-quote-right fa-2x"></i></a></div>
+
   </div>
 </div>
 <!-- <div class="inBetween">
@@ -40,11 +56,11 @@
  -->
 
 <div class="statTitle">
-    <h1 id="stats">.stats</h1><!-- <div class="flyingObjects">
-      <i class="far fa-address-card"></i>
-    </div> -->
+    <h1 id="stats">.stats</h1>
 <div class="stats">
-    <img src="temp_img/person.png">
+    <div id="badge">
+      <i class="fas fa-id-badge"></i>
+    </div>
     <div class="statsWrapper">
       <div class="picStat">
         <div id="html"><p>html</p></div>
@@ -58,12 +74,60 @@
 </div>
 </div>
 
+<!-- modal test -->
+<div class="modal fade" id="imagemodal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-body">
+        <button type="button" class="close" data-dismiss="modal">
+        <span aria-hidden="true">&times;</span>
+        <span class="sr-only">Close</span></button>
+        <img src="" class="imagepreview" style="width: 100%;" >
+      </div>
+    </div>
+  </div>
+</div>
+<!-- modal test -->
+
+<div class="achievements">
+  <h1 >.achievements</h1>
+  <div class="acWrapper">
+    <span class="achleftButton">
+      <i class="fas fa-angle-left fa-5x" id="right"></i>
+    </span>
+  <div class="aslider">
+
+    <div class="hide">
+      <img id="loo" src="img/uwaterloo.png">
+      <p>Honors Bachelors of Arts</p>
+    </div>
+
+    <div class="show">
+      <a href="#" class="popup">
+        <img id="ga" src="img/ga.png">
+      </a>
+      <p>Web development immersive April 2018</p>
+    </div>
+
+    <div class="hide">
+        <img id="conti" src="img/conti.jpg">
+        <img id="mobis" src="img/mobis.png"><br>
+        <img id="scotia" src="img/scotiabank.png">
+        <img id="randstad" src="img/randstad.png">
+      <p id="hr">7 years of prior HR & Recruitment experience </p>
+    </div>
+  </div>
+    <span class="achrightButton">
+      <i class="fas fa-angle-right fa-5x" id="right"></i>
+    </span>
+  </div>
+</div>
+
 
 <div class="portfolio">
-  <h1>.portfolio</h1>
+  <h1 id="portF">.portfolio</h1>
   <div class="portfolioWrapper">
     <div class="projectPanel">
-
       <div class="projectSelector">
         <div><p href="#monument">Monument Landing</p></div>
         <div><p href="#shoppingCart">Shopping Cart</p></div>
@@ -71,45 +135,109 @@
         <div><p href="#something">Something Else </p></div>
       </div>
       <div class="projectDescription">
-        <section id="monument"><img src="temp_img/404.png"><br>Monument Landing - Created a blog style webpage using HTML, CSS and a touch of Jquery <br> it is great! lalasfiwh
-        more text more text lalalamore text more text lalalamore text more text lalalamore text more text lalalamore text more text lalalamore text more text lalalamore text more text lalalamore text more text lalalamore text more text lalalala</section>
-        <section id="racingGame"><img src="temp_img/404.png"><br>Poke Racing</section>
-        <section id="shoppingCart"><img src="temp_img/404.png"><br>Shopping Cart Z</section>
+        <section id="monument">
+          <div class="project">
+            <img src="img/project1.png">
+            <div class="description">
+              <h3>Monument Landing</h3>
+              <p>article website with clean modern design built from scratch</p>
+              <ul>
+                <li>css</li>
+                <li>html</li>
+              </ul>
+                <span class="gitContainer"><a href="https://github.com/ktso11" target="_blank"><i class="fab fa-github fa-2x"></i></a></span>
+            </div>
+          </div>
+        </section>
+
+        <section id="racingGame">
+          <div class="project">
+            <img src="img/project2.png">
+            <div class="description">
+              <h3>Poke Racing Game</h3>
+              <p>racing game written with vanilla Javascript</p>
+              <ul>
+                <li>javascript</li>
+                <li>css</li>
+                <li>html</li>
+              </ul>
+                <span class="gitContainer"><a href="https://github.com/ktso11" target="_blank"><i class="fab fa-github fa-2x"></i></a></span>
+            </div>
+          </div>
+        </section>
+
+        <section id="shoppingCart">
+          <div class="project">
+            <img src="img/project3.png">
+            <div class="description">
+              <h3>Plant & Zombie Shopping Cart</h3>
+              <p>interactive shopping website which allows the user to purchase plants</p>
+              <ul>
+                <li>css</li>
+                <li>html</li>
+                <li>javascript</li>
+              </ul>
+              <span class="gitContainer"><a href="https://github.com/ktso11" target="_blank"><i class="fab fa-github fa-2x"></i></a></span>
+            </div>
+          </div>
+        </section>
       </div>
     </div>
+  </div>
 </div>
 
 
 <div class="recommendations">
-  <h1>.recommendations</h1>
+  <h1 id="reC">.testimonials</h1>
   <div class="reWrapper">
-<i class="fas fa-angle-left fa-5x"></i>
-  <div class="slider">
-    <img class="hidden" id="project1" src="temp_img/404.png">
-    <img class="hidden" id="project2" src="temp_img/ufo.png">
-    <img class="reveal" id="project3" src="temp_img/person.png">
-  </div>
-<button id="id">right</button><i class="fas fa-angle-right fa-5x" ></i>
+    <span class="leftButton">
+      <i class="fas fa-angle-left fa-5x"></i>
+    </span>
 
+    <div class="slider">
+      <div class="hidden">
+
+        <p><i class="fas fa-quote-left fa-2x"></i> Katie was a conscientious, and hard worker colleague that supported us at Continental Tire Canada Inc. with exemplary commitment.
+          Her work was marked by thoroughness, attention to detail and a very healthy dose of perseverance until the objective was achieved.
+        <i class="fas fa-quote-right fa-2x"></i></p>
+        <p id="recFrom">Meletis X. - VP</p>
+      </div>
+      <div class="reveal">
+        <p><i class="fas fa-quote-left fa-2x"></i>
+           In my time as her HR Teammate at Hyundai MOBIS Technical Center of North America (MTCA), I have witnessed her perform her duties with passion & precision.
+        <i class="fas fa-quote-right fa-2x"></i></p>
+        <p id="recFrom">Gray, Training Specialist</p>
+      </div>
+      <div class="hidden" >
+        <p> <i class="fas fa-quote-left fa-2x"></i> I must say that she is very punctual and brings a "can-do" personality. With me working in the US and Katie in Canada she has truly become a go-to person for communication and task resolution to gets things accomplished.
+        <i class="fas fa-quote-right fa-2x"></i></p>
+        <p id="recFrom">Sam, IT</p>
+      </div>
+    </div>
+
+    <span class="rightButton">
+      <i class="fas fa-angle-right fa-5x" id="right"></i>
+    </span>
   </div>
 </div>
 
 
+
 <div class ="contact">
-  <h1>.contact me</h1>
+  <h1 id="contactForm">.contact me</h1>
   <form class="contactMe"  enctype="text/plain" method="post">
     <div class="formContainer">
     <div class="formWrapper">
           <p>.name </p>
-          <input  id="checkError" type="text" name="name" placeholder="Your Name Goes Here">
+          <input  id="checkError" type="text" name="name" >
           <span id="insertSomething">please include your name</span>
           <p>.email</p>
-          <input id="checkError" type="text" name="email" placeholder="Your Email Here Please">
+          <input id="checkError" type="text" name="email" >
           <span id="insertSomething">please enter your email</span>
           <p>.subject</p>
-          <input  id="checkError" list="subject" name="subject" placeholder="select one">
+          <input  id="checkError" list="subject" name="subject" ">
           <span id="insertSomething">please enter subject</span>
-          <p>comment</p>
+          <p>.comment</p>
           <textarea id="checkError" rows="3" cols="40" name="message"></textarea>
           <span id="insertSomething">include a comment</span>
 
@@ -123,13 +251,14 @@
 </div>
 
 </main>
-
 <footer>
   <nav>
-    back to top, about me, portfolio, accomplishments
+    <a href="#top"> back to top</a>
+    <a href="#stats"> about me</a>
+    <a href="#portF"> portfolio </a>
+    <a href="#reC">testimonials</a>
   </nav>
+  <p>© of katie so</p>
 </footer>
-
-
 </body>
 </html>
