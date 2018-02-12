@@ -23,9 +23,7 @@ header p {
   /*float: left;*/
   font-size: 2em;
   font-weight: 800;
-
 }
-
 
 main {
   width: 80%;
@@ -114,7 +112,6 @@ body {
   border-radius: .5em;
   padding: .5em .5em;
   text-align: center;
-
 }
 
 #summary {
@@ -135,15 +132,7 @@ body {
 
 /*STATS SECTION*/
 
-.stats img {
-  height: 22em;
-  width: 18%;
-  margin-right: 1em;
-  margin-bottom: 3em;
-  margin-left: 2.5em;
-  margin-top: 2em;
-  opacity: .5;
-}
+
 
 .stats {
   display: flex;
@@ -151,7 +140,17 @@ body {
   flex-direction: row;
   height: 27em;
 }
-
+#badge {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width:25%;
+  margin-left: 1.6em;
+}
+.fa-id-badge {
+  font-size: 15em;
+  color: purple;
+}
 .picStat div{
   width: 0;
   height: 2em;
@@ -170,7 +169,7 @@ body {
 }
 
 .statsWrapper {
-  width:70%;
+  width:80%;
   display: flex;
   justify-content: space-between;
   flex-direction: column;
@@ -271,6 +270,11 @@ margin: 0em 1em;
 .projectSelector {
   width: 30%;
 }
+.projectSelector p{
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ }
 .projectSelector div p{
   text-align: center;
   color: white;
@@ -491,10 +495,13 @@ height: auto;
 footer {
   background-color: #29BAAF;
   width: 100%;
-  padding: 1em 1.6em;
+  padding: .2em 1.6em;
   margin-bottom: 0em;
-  margin-top: 5em;
-  height:4em;
+  /*margin-top: 5em;*/
+  height:2em;
+  /*position:fixed;*/
+  left:0;
+  bottom:0;
 }
 footer p{
   text-align: right;
@@ -519,18 +526,177 @@ footer nav a:hover{
   text-shadow:.1em .1em .1em black;
   font-size: 1.1em;
 }
+footer nav a:active-link>a{
+  text-shadow:.1em .1em .1em black;
+  font-size: 1.1em;
+  text-decoration: underline;
+}
 
 /*END OF FOOTER*/
+
+/*Hamburger*/
+.menu{
+  background-color: purple;
+  width: 100%;
+  padding: .2em 1.6em;
+  margin-bottom: 0em;
+  height:2.5em;
+  position:fixed;
+  top:-10em;
+  padding-left: .4em;
+  padding-right: .4em;
+  transition: .3s all;
+  z-index: 30;
+}
+
+header nav {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  align-items: flex-start;
+}
+
+header nav a{
+  margin-right: 2em;
+  text-decoration: none;
+  color: #FFF5C3;
+}
+header nav a:hover{
+  color: orange;
+}
+
+.fa-bars {
+  color: #29BAAF;
+}
+.hamburger{
+  position: absolute;
+  left: .5em;
+  top: .5em;
+  display: none;
+}
+.menuShow {
+  left: 0em;
+  top: 0em;
+}
+/*end of hamburger*/
+
+
+/*MODAL */
+.modal {
+    display: none;
+    position: fixed; /* Stay in place */
+    z-index: 30; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.9);
+    }
+/* Modal Content (image) */
+.modal-body button{
+  font-size: 5em;
+  color: white;
+  text-align: center;
+  background-color: transparent;
+  border: none;
+}
+
+
+
+/*end of MODAL
 
 
 /*media query*/
 @media screen and (max-width: 1000px) {
-
 #summary p{
   font-size: .7em;
-
+}
+.fa-id-badge {
+  font-size: 12em;
+}
 }
 
+@media screen and (max-width: 725px) {
+.emptyDiv{
+  display: none;
+}
+.projectDescription img{
+  display: none;
+}
+.fa-id-badge {
+  font-size: 11em;
+}
+}
+
+@media screen and (max-width: 700px) {
+h1 {
+  font-size: 3em;
+}
+#top h1{
+  font-size: 5em;
+}
+.fa-id-badge {
+  display: none;
+}
+.statsWrapper{
+  width: 100%
+}
+#badge {
+  width:0em;
+}
+
+@media screen and (max-width: 590px) {
+
+.hamburger{
+  display: block;
+}
+#summary {
+  display: none;
+}
+.statsWrapper{
+  width: 100%;
+}
+h1{
+  margin-left: 0em;
+}
+.aslider p{
+  display: none;
+}
+img#ga{
+  width: 10em;
+  height: 7em;
+}
+#hr{
+  display: block;
+}
+img#conti, img#mobis, img#scotia, img#randstad {
+  display: none;
+}
+
+.proSelector div  {
+  padding-top: 0em;
+ padding-bottom: 0em;
+}
+.proSelector div p  {
+  padding-top: 0em;
+ padding-bottom: 0em;
+}
+
+.slider p {
+  font-size: .8em;
+}
+footer {
+  font-size: .9em;
+}
+.menu {
+  font-size: .9em;
+}
+h1 {
+  font-size: 2.5em;
+}
 }
 
 

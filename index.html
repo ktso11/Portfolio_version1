@@ -6,12 +6,24 @@
   <link href="https://fonts.googleapis.com/css?family=Hind" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:700|Shrikhand" rel="stylesheet">
   <script type="text/javascript" src="js/jquery-3.3.1.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
   <script type="text/javascript" src="js/script.js"></script>
   <link rel="stylesheet" href="style/main.css">
 </head>
 
 <body>
-<header id="top"> <h1>#katieSo</h1>
+  <div class="hamburger"><a href="#" class="hamburger"><i class="fas fa-bars fa-3x"></i></a></div>
+  <header id="top">
+    <nav class="menu">
+    <a href="#top"> back to top</a>
+    <a href="#stats"> about me</a>
+    <a href="#portF"> portfolio </a>
+    <a href="#reC">testimonials</a>
+    <!-- <a href="#" class="hamburger">X</a> -->
+  </nav>
+<h1>#katieSo</h1>
  <p>{class: webdeveloper};</p>
  </header>
  <main>
@@ -22,7 +34,7 @@
   <div class="navWrapper">
     <div id="aboutMe"> <p><a href="#stats"> about me</p><i class="far fa-address-book fa-2x"></i></a></div>
     <div class="emptyDiv"><p></p></div>
-    <div id="portfolio"><p><a href="#portF">portfolio</p> <i class="fas fa-trophy fa-2x"></i></a></div>
+    <div id="portfolio"><p><a href="#" onclick="portfolio()">portfolio</p> <i class="fas fa-trophy fa-2x"></i></a></div>
     <div id="contactMe"> <p><br><a href="#contactForm">contact me</p> <i class="fas fa-envelope fa-2x"></i></a></div>
     <div class="emptyDiv"><p></p></div>
     <div id="summary">
@@ -46,7 +58,9 @@
 <div class="statTitle">
     <h1 id="stats">.stats</h1>
 <div class="stats">
-    <img src="temp_img/person.png">
+    <div id="badge">
+      <i class="fas fa-id-badge"></i>
+    </div>
     <div class="statsWrapper">
       <div class="picStat">
         <div id="html"><p>html</p></div>
@@ -59,6 +73,21 @@
     </div>
 </div>
 </div>
+
+<!-- modal test -->
+<div class="modal fade" id="imagemodal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-body">
+        <button type="button" class="close" data-dismiss="modal">
+        <span aria-hidden="true">&times;</span>
+        <span class="sr-only">Close</span></button>
+        <img src="" class="imagepreview" style="width: 100%;" >
+      </div>
+    </div>
+  </div>
+</div>
+<!-- modal test -->
 
 <div class="achievements">
   <h1 >.achievements</h1>
@@ -74,7 +103,9 @@
     </div>
 
     <div class="show">
-      <img  id="ga" src="img/ga.png">
+      <a href="#" class="popup">
+        <img id="ga" src="img/ga.png">
+      </a>
       <p>Web development immersive April 2018</p>
     </div>
 
@@ -83,7 +114,7 @@
         <img id="mobis" src="img/mobis.png"><br>
         <img id="scotia" src="img/scotiabank.png">
         <img id="randstad" src="img/randstad.png">
-      <p>7 years of prior HR & Recruitment experience </p>
+      <p id="hr">7 years of prior HR & Recruitment experience </p>
     </div>
   </div>
     <span class="achrightButton">
@@ -178,7 +209,7 @@
         <p id="recFrom">Gray, Training Specialist</p>
       </div>
       <div class="hidden" >
-        <p> <i class="fas fa-quote-left fa-2x"></i> I have the pleasure of working with Katie here at Continental Tire of North America and I must say that she is very punctual and brings a "can-do" personality. She's always willing to assist and provide needed info upon preparing for new hires to begin at Continental Tire. With me working in the US and Katie in Canada she has truly become a go-to person for communication and task resolution to gets things accomplished.
+        <p> <i class="fas fa-quote-left fa-2x"></i> I must say that she is very punctual and brings a "can-do" personality. With me working in the US and Katie in Canada she has truly become a go-to person for communication and task resolution to gets things accomplished.
         <i class="fas fa-quote-right fa-2x"></i></p>
         <p id="recFrom">Sam, IT</p>
       </div>

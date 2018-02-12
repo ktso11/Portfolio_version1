@@ -1,14 +1,29 @@
 console.log("javascript is loaded!")
+
+// var modal = document.getElementById('myModal');
+// var img = document.getElementById('ga');
+// var modalImg = document.getElementById('img01');
+
+// img.onclick = function(){
+//   modal.style.display = "block";
+//   modalImg.src = this.src; //
+// }
+// var span = document.getElementByClassName("close")[0];
+// span.onclick = function(){
+//   modal.style.display="none";
+// }
+
+
 $(function(){
 
 $(window).on('scroll', function(){
   if($(window).scrollTop()>600){
     var status = $('.picStat div');
-      status.eq(0).animate({width:'25em'}, {duration: 1500});
-      status.eq(1).animate({width:'23em'}, {duration: 1500});
-      status.eq(2).animate({width:'16em'}, {duration: 1200});
-      status.eq(3).animate({width:'7.5em'}, {duration: 800});
-      status.eq(4).animate({width:'5.5em'}, {duration: 1200});
+      status.eq(0).animate({width:'70%'}, {duration: 1500});
+      status.eq(1).animate({width:'70%'}, {duration: 1500});
+      status.eq(2).animate({width:'40%'}, {duration: 1200});
+      status.eq(3).animate({width:'40%'}, {duration: 800});
+      status.eq(4).animate({width:'20%'}, {duration: 1200});
       status.eq(5).animate({width:'100%'}, {duration: 5200});
   }
 })
@@ -43,13 +58,10 @@ var testimon = $('.reWrapper');
 var contact = $('.formContainer');
   contact.hide();
   $(window).on('scroll', function(){
-    if($(window).scrollTop()>2100){
+    if($(window).scrollTop()>2000){
       contact.slideDown(1000);
     }
   })
-
-
-
 
 //Portfolio selector click -> Display
 $('.projectSelector div p').each(function(){
@@ -60,7 +72,6 @@ $('.projectSelector div p').each(function(){
     $(displaySection).slideDown(700);
   })
 })
-
 
 //FORM VALIDATION
 $('form').on('submit', function(event){
@@ -78,21 +89,7 @@ $('form').on('submit', function(event){
 
 
 
-
-
-  // var slide = $('.slider img');
-  // var n = slide.length;
-  // // var grabId = slide.attr("id")
-  // for (var i =0; i < n; i++){
-  //    $('#id').on('click', function(){
-
-  //     slide[i].hide();
-  //    slide[i+1].show();
-  //    console.log("hello")
-  // })}
-
-
-
+//IMAGE SLIDERS
 
 // https://snook.ca/archives/javascript/simplest-jquery-slideshow
   setInterval(function(){
@@ -132,7 +129,6 @@ $('.leftButton').on('click', function(){
 
 
 
-
 //slider for achievement section
 $('.achrightButton').on('click', function() {
   var activePic = $('.show');
@@ -158,6 +154,27 @@ $('.achleftButton').on('click', function(){
   nextPic.addClass('show').removeClass('hide').css("z-index", 20);
   $('.aslider div').not([activePic, nextPic]).css("z-index", 1);
 })
+
+
+// modal
+$(function() {
+    $('.popup').on('click', function(e) {
+
+      $('.imagepreview').attr('src', $(this).find('img').attr('src'));
+      //above line - imgprev is class of img src for empty modal. is if taking 'this' img's src and assigning it to modal img src
+      $('#imagemodal').modal('show');
+           e.preventDefault();
+    });
+});
+
+
+//hamburger
+ $(".hamburger").on('click', '.hamburger', function() {
+    console.log('clicked on hamburger');
+    $(".menu").toggleClass("menuShow");
+  });
+
+
 
 
   // Get currently displayed image id
