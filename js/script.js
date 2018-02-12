@@ -1,18 +1,5 @@
 console.log("javascript is loaded!")
 
-// var modal = document.getElementById('myModal');
-// var img = document.getElementById('ga');
-// var modalImg = document.getElementById('img01');
-
-// img.onclick = function(){
-//   modal.style.display = "block";
-//   modalImg.src = this.src; //
-// }
-// var span = document.getElementByClassName("close")[0];
-// span.onclick = function(){
-//   modal.style.display="none";
-// }
-
 
 $(function(){
 
@@ -64,12 +51,11 @@ var contact = $('.formContainer');
   })
 
 //Portfolio selector click -> Display
-$('.projectSelector div p').each(function(){
+$('.projectSelector div p').each(function(){ //each item on the menu is a sep p tag
   $(this).on('click', function(){
-    var displaySection = $(this).attr("href");
-    console.log(displaySection);
-    $('section').hide(0);
-    $(displaySection).slideDown(700);
+    var displaySection = $(this).attr("href"); //grab the href of that <p>
+    $('section').hide(0); //hide the current section
+    $(displaySection).slideDown(700); //display the section with the id === href
   })
 })
 
@@ -156,12 +142,11 @@ $('.achleftButton').on('click', function(){
 })
 
 
-// modal
+// modal - bootstrap
 $(function() {
     $('.popup').on('click', function(e) {
-
       $('.imagepreview').attr('src', $(this).find('img').attr('src'));
-      //above line - imgprev is class of img src for empty modal. is if taking 'this' img's src and assigning it to modal img src
+      //above line - imgprev is class of img src for empty modal. taking 'this' img's src and assigning it to modal img src
       $('#imagemodal').modal('show');
            e.preventDefault();
     });
@@ -169,11 +154,24 @@ $(function() {
 
 
 //hamburger
- $(".hamburger").on('click', '.hamburger', function() {
-    console.log('clicked on hamburger');
+// https://www.htmlgoodies.com/beyond/cms/creating-a-hamburger-menu-with-html-css-and-jquery.html
+ $(".hamburger").on('click', function(e) {
     $(".menu").toggleClass("menuShow");
+    e.preventDefault();
   });
 
+
+$('nav a').on('click', function(e) {
+  e.preventDefault();
+  // use the href of the link to identify what
+  var thisTarget = $(this).attr('href');
+  var targetOffset = $(thisTarget).offset().top; //offset grabs the coordinates of a element - we are grabbing the top in this scenerio
+  // use jQuery.animate() to animate the body's
+  // scrollTop to the targetOffest
+  $('body').animate({
+    scrollTop: targetOffset
+  }, 600);
+});
 
 
 
