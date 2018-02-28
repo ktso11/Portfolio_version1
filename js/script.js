@@ -1,6 +1,6 @@
 console.log("javascript is loaded!")
 
-
+//TODO: cool shorthand way of calling document.ready! 
 $(function(){
 
 $(window).on('scroll', function(){
