@@ -75,8 +75,7 @@ $('form').on('submit', function(event){
 
 
 
-//IMAGE SLIDERS
-
+// IMAGE SLIDERS
 // https://snook.ca/archives/javascript/simplest-jquery-slideshow
   setInterval(function(){
   $('.slider div:first-child').addClass('hidden').removeClass('reveal').css("z-index", -10)

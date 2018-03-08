@@ -691,8 +691,12 @@ img#conti, img#mobis, img#scotia, img#randstad {
 footer {
   font-size: .9em;
 }
+footer nav{
+  display: none;
+}
 .menu {
   font-size: .9em;
+  border-radius: .5em;
 }
 h1 {
   font-size: 2.5em;
