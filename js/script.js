@@ -6,12 +6,17 @@ $(function(){
 $(window).on('scroll', function(){
   if($(window).scrollTop()>600){
     var status = $('.picStat div');
-      status.eq(0).animate({width:'70%'}, {duration: 1500});
-      status.eq(1).animate({width:'70%'}, {duration: 1500});
-      status.eq(2).animate({width:'40%'}, {duration: 1200});
-      status.eq(3).animate({width:'40%'}, {duration: 800});
-      status.eq(4).animate({width:'20%'}, {duration: 1200});
-      status.eq(5).animate({width:'100%'}, {duration: 5200});
+    var speed = [3000, 1200, 1500, 1200,3000, 4000, 1800, 4000,1900, 2500,3000,3000,2100, 1000,4000]
+    var barLength = ['100%', '95%','80%','80%','40%','40%','64%','75%','64%','65%','68%','40%']
+    for(i=0; i< status.length; i++){
+
+      status.eq(i).animate({width: barLength[i]}, {duration: speed[i]});
+      // status.eq(1).animate({width:'70%'}, {duration: 1500});
+      // status.eq(2).animate({width:'40%'}, {duration: 1200});
+      // status.eq(3).animate({width:'40%'}, {duration: 800});
+      // status.eq(4).animate({width:'20%'}, {duration: 1200});
+      // status.eq(5).animate({width:'100%'}, {duration: 5200});
+    }
   }
 })
 //achievement slideDown
@@ -24,7 +29,7 @@ var achievement = $('.acWrapper');
   })
 
   //portfolio slideDown menu
-var projects = $('.projectSelector div p');
+var projects = $('.portfolioWrapper');
     projects.hide();
 $(window).on('scroll', function(){
   if($(window).scrollTop()>1300){
@@ -51,11 +56,11 @@ var contact = $('.formContainer');
   })
 
 //Portfolio selector click -> Display
-$('.projectSelector div p').each(function(){ //each item on the menu is a sep p tag
+$('.projectSelector div p').each(function(){
   $(this).on('click', function(){
-    var displaySection = $(this).attr("href"); //grab the href of that <p>
-    $('section').hide(0); //hide the current section
-    $(displaySection).slideDown(700); //display the section with the id === href
+    var displaySection = $(this).attr("href");
+    $('section').hide(0);
+    $(displaySection).slideDown(700);
   })
 })
 
@@ -75,8 +80,7 @@ $('form').on('submit', function(event){
 
 
 
-//IMAGE SLIDERS
-
+// IMAGE SLIDERS
 // https://snook.ca/archives/javascript/simplest-jquery-slideshow
   setInterval(function(){
   $('.slider div:first-child').addClass('hidden').removeClass('reveal').css("z-index", -10)
@@ -119,14 +123,13 @@ $('.leftButton').on('click', function(){
 $('.achrightButton').on('click', function() {
   var activePic = $('.show');
   var nextPic = activePic.next();
-  if (nextPic.length === 0) // when at the end of list of img
+  if (nextPic.length === 0)
   {
-    nextPic = $('.aslider div').first(); //then return to first img
+    nextPic = $('.aslider div').first();
   }
   activePic.removeClass('show').addClass('hide').css("z-index", -10);
   nextPic.addClass('show').removeClass('hide').css("z-index", 20);
   $('.aslider div').not([activePic, nextPic]).css("z-index", 1)
- // e.preventDefault();//not sure if it is needed
 })
 
 $('.achleftButton').on('click', function(){
@@ -146,7 +149,6 @@ $('.achleftButton').on('click', function(){
 $(function() {
     $('.popup').on('click', function(e) {
       $('.imagepreview').attr('src', $(this).find('img').attr('src'));
-      //above line - imgprev is class of img src for empty modal. taking 'this' img's src and assigning it to modal img src
       $('#imagemodal').modal('show');
            e.preventDefault();
     });
@@ -161,40 +163,16 @@ $(function() {
   });
 
 
-$('nav a').on('click', function(e) {
+$('.smooth').on('click', function(e) {
   e.preventDefault();
-  // use the href of the link to identify what
   var thisTarget = $(this).attr('href');
   var targetOffset = $(thisTarget).offset().top; //offset grabs the coordinates of a element - we are grabbing the top in this scenerio
-  // use jQuery.animate() to animate the body's
-  // scrollTop to the targetOffest
   $('body').animate({
     scrollTop: targetOffset
   }, 600);
 });
 
 
-
-  // Get currently displayed image id
-  // var activePic = $('.reveal').attr('id');
-  // console.log(activePic);
-  // activePic.toggleClass('hidden');
-  // for (prop in s){
-  // if (activePic === prop);
-  // console.log('true');}
-  // Take that id and find it in the slide object (does it === s?)
-  // for (prop in s){ //to find if the #id matches the key
-  //   if (activePic === prop){
-
-
-    // activePic.toggleClass('hidden');
-
-  // Change to that image
-  // Update the classes (hidden and reveal) accordingly
-
-
-
-//this is for the top function
 })
 
 

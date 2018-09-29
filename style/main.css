@@ -3,8 +3,10 @@
 }
 
 header {
-  background-color: #FFF5C3;
+  /*background-color: black;*/
+  background-image: url("../img/square.jpg");
   width: 100%;
+  top:0;
   margin-bottom: 5em;
   display: flex;
   height: 12em;
@@ -13,14 +15,14 @@ header {
 }
 header h1 {
   font-size: 6em;
-  color: #29BAAF;
+  color: #FFF5C3;
+  text-shadow:.01em .01em .2em grey;
   text-align: right;
 }
 
 header p {
   display: none;
   color: #2C085E;
-  /*float: left;*/
   font-size: 2em;
   font-weight: 800;
 }
@@ -30,18 +32,10 @@ main {
   margin: 0 auto;
 }
 body {
-/*    background-image: url('../img/background.jpg');
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-attachment: fixed;*/
-    /*font-family: 'Hind', sans-serif;*/
    font-family: 'Open Sans', sans-serif;
-   background: fixed,
-    linear-gradient(to bottom, #29BAAF 20%,#2C085E 80%);
-  /*background-color:  #29BAAF;*/
-    /*font-family: 'Shrikhand', cursive;*/
-/*    font-family: 'Open Sans', sans-serif;*/
-    /*color: #505050;*/
+/*   background: fixed,
+    linear-gradient(to bottom, #29BAAF 20%,#2C085E 80%);*/
+    background-color: rgb(37,146,150); ;
     color: #FFF5C3;
     text-transform: uppercase;
     margin: 0em 0em;
@@ -57,18 +51,18 @@ body {
   height: 20em;
 }
 
+
+
 /*TOP NAV*/
 .navigation a, .navigation a:visited {
   text-decoration: none;
   color: #FFF5C3;
 }
 .navigation a:hover, .navigation a:active {
-  /*text-decoration: none;*/
   color: #FFF5C3;
    text-shadow:.1em .1em .1em black;
 
 }
-
 
 .navigation p{
     color: #FFF5C3;
@@ -115,13 +109,11 @@ body {
 }
 
 #summary {
-/*  text-align: justify-all;
-  justify-content: center;*/
   padding: 1.61em 1.61em;
   font-weight: 0em;
   width: 35%;
       text-align: left;
-    /*text-justify: inter-word;*/
+
 }
 
 .navWrapper>* {
@@ -131,8 +123,6 @@ body {
 /*TOP NAV*/
 
 /*STATS SECTION*/
-
-
 
 .stats {
   display: flex;
@@ -153,10 +143,12 @@ body {
 }
 .picStat div{
   width: 0;
-  height: 2em;
-  margin-bottom: 1.5em;
+  height: 1.5em;
+  margin-bottom: .2em;
   background-color: green;
-   border-radius: .5em;
+  border-radius: .5em;
+  flex-wrap: wrap;
+
 }
 .stats p{
   font-size: .9em;
@@ -192,7 +184,7 @@ body {
 
 .portfolioWrapper {
   width: 100%;
-  height: auto;
+  height: 25em;
 }
 
 .projectPanel {
@@ -247,11 +239,12 @@ margin: 0em 1em;
   /*cursor: pointer;*/
 }
 
-.gitContainer a{
+
+#gitstyle a{
   color: orange;
   cursor: pointer;
 }
-.gitContainer a:hover{
+#gitstyle a:hover{
   color: #FFF5C3;
   cursor: pointer;
 }
@@ -436,12 +429,13 @@ height: auto;
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  height: auto;
+  height: 27em;
   padding: 1.61em 1em;
 }
 
 .aslider {
   width:80%;
+  height: 22em;
   display: flex;
   justify-content: center;
   text-align: center;
@@ -493,7 +487,7 @@ height: auto;
 
 /*FOOTER*/
 footer {
-  background-color: #29BAAF;
+  /*background-color: #29BAAF;*/
   width: 100%;
   padding: .2em 1.6em;
   margin-bottom: 0em;
@@ -603,10 +597,10 @@ header nav a:hover{
   background-color: transparent;
   border: none;
 }
-
-
-
-/*end of MODAL
+/*end of MODAL*/
+#mobile{
+  display: none;
+}
 
 
 /*media query*/
@@ -617,17 +611,21 @@ header nav a:hover{
 .fa-id-badge {
   font-size: 12em;
 }
+.projectDescription img{
+  display: none;
+}
 }
 
 @media screen and (max-width: 725px) {
 .emptyDiv{
   display: none;
 }
-.projectDescription img{
-  display: none;
-}
+
 .fa-id-badge {
   font-size: 11em;
+}
+.projectDescription p{
+  display: none;
 }
 }
 
@@ -649,6 +647,14 @@ h1 {
 }
 
 @media screen and (max-width: 590px) {
+
+.mobileBody{
+  display: none;
+}
+#mobile{
+  display: block;
+}
+
 
 .hamburger{
   display: block;
@@ -691,8 +697,12 @@ img#conti, img#mobis, img#scotia, img#randstad {
 footer {
   font-size: .9em;
 }
+footer nav{
+  display: none;
+}
 .menu {
   font-size: .9em;
+  border-radius: .5em;
 }
 h1 {
   font-size: 2.5em;
