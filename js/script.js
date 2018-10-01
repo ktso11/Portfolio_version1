@@ -9,13 +9,7 @@ $(window).on('scroll', function(){
     var speed = [3000, 1200, 1500, 1200,3000, 4000, 1800, 4000,1900, 2500,3000,3000,2100, 1000,4000]
     var barLength = ['100%', '95%','80%','80%','40%','40%','64%','75%','64%','65%','68%','40%']
     for(i=0; i< status.length; i++){
-
       status.eq(i).animate({width: barLength[i]}, {duration: speed[i]});
-      // status.eq(1).animate({width:'70%'}, {duration: 1500});
-      // status.eq(2).animate({width:'40%'}, {duration: 1200});
-      // status.eq(3).animate({width:'40%'}, {duration: 800});
-      // status.eq(4).animate({width:'20%'}, {duration: 1200});
-      // status.eq(5).animate({width:'100%'}, {duration: 5200});
     }
   }
 })
@@ -23,7 +17,7 @@ $(window).on('scroll', function(){
 var achievement = $('.acWrapper');
   achievement.hide();
   $(window).on('scroll', function(){
-    if($(window).scrollTop()>900){
+    if($(window).scrollTop()>800){
       achievement.slideDown(1000);
     }
   })
@@ -32,7 +26,7 @@ var achievement = $('.acWrapper');
 var projects = $('.portfolioWrapper');
     projects.hide();
 $(window).on('scroll', function(){
-  if($(window).scrollTop()>1300){
+  if($(window).scrollTop()>1200){
       projects.slideDown(800);
   }
 })
@@ -41,19 +35,11 @@ $(window).on('scroll', function(){
 var testimon = $('.reWrapper');
   testimon.hide();
   $(window).on('scroll', function(){
-    if($(window).scrollTop()>1700){
+    if($(window).scrollTop()>1600){
       testimon.slideDown(1000);
     }
   })
 
-//contact form slideDown
-var contact = $('.formContainer');
-  contact.hide();
-  $(window).on('scroll', function(){
-    if($(window).scrollTop()>2000){
-      contact.slideDown(1000);
-    }
-  })
 
 //Portfolio selector click -> Display
 $('.projectSelector div p').each(function(){
