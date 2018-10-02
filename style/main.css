@@ -93,7 +93,7 @@ body {
 }
 
 .emptyDiv  {
-  background-color: purple;
+  background-color: #694624;
     margin:.5em .5em;
   border-radius: .5em;
   padding: .5em .5em;
@@ -139,7 +139,7 @@ body {
 }
 .fa-id-badge {
   font-size: 15em;
-  color: purple;
+  color: #694624;
 }
 .picStat div{
   width: 0;
@@ -203,7 +203,7 @@ width: 70%;
   display: none;
   /*height: 40%;*/
   /*transition: all 2s linear;*/
-  background-color: purple;
+  background-color: #694624;
   align-items: stretch;
   margin: 1em 1em;
   border-radius: .5em;
@@ -451,11 +451,11 @@ height: auto;
 
 .fa-briefcase{
   font-size: 8em;
-  color:purple;
+  color:#694624;
 }
 
 .aslider p{
-  background-color: purple;
+  background-color: #694624;
   border-radius: 1em;
   padding:.2em .5em;
 }
