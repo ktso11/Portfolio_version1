@@ -1,5 +1,7 @@
 # About Me v1
 
+https://ktso11.github.io/Portfolio_version1/
+
 Thank you for visiting my 'About Me' site. 
 
 I created this page as a part of General Assembly's Project 1 requirement. The goal was to create a site to display my work and share some information about me. 
